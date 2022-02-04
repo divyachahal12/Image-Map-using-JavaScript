@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title> JavaScript Image Map </title>
+    <script>
+    function show(name) {
+    document.my.res.value = name;
+    }
+    </script>
+  </head>
+
+  <body style = "text-align: center;" bgcolor = "#EBFFFA">
+    <font color = #66CCCC face="sans-serif">
+      <h2 > Image Map Using JavaScript </h2>
+      <form name = "my">
+        <input type = "text" name = "res" size = "25px" style = "font-size: 25px;text-align: center;border: 2px solid #66CCCC;"/>
+      </form>
+      <br>
+      <img src = "image.png" border = "5" usemap = "#names" height = "300px"/>
+      <map name = "names">
+        <area shape = "poly"
+              coords = "223, 53, 325, 53, 316, 156, 274, 167, 232, 156"
+              href = "https://www.w3schools.com/html/"
+              alt="HTML"
+              target="_self"
+              onMouseOver = "show('HTML')"
+              onMouseOut = "show('')"
+        />
+        <area shape = "poly"
+              coords = "150, 136, 227, 136, 229, 155, 233, 158, 227, 222, 192, 231, 158, 222"
+              href = "https://www.w3schools.com/css/"
+              alt="CSS"
+              target="_self"
+              onMouseOver = "show('CSS')"
+              onMouseOut = "show('')"
+        />
+        <area shape = "poly"
+              coords = "320, 136, 407, 136, 407, 230, 316, 230, 314, 158"
+              href = "https://www.w3schools.com/js/"
+              alt="JavaScript"
+              target="_self"
+              onMouseOver = "show('JavaScript')"
+              onMouseOut = "show('')"
+        />
+      </map>
+      </font>
+  </body>
+</html>
